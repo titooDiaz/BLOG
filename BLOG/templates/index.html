@@ -6,49 +6,96 @@
     <title>INDEX</title>
     <link rel="stylesheet" href="../static/css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/df1bf70741.js" crossorigin="anonymous"></script>
 
     <script>
+        const customColors = {
+              'oscuro': {
+                '50': '#f6f6f6',
+                '100': '#e7e7e7',
+                '200': '#d1d1d1',
+                '300': '#b0b0b0',
+                '400': '#888888',
+                '500': '#6d6d6d',
+                '600': '#5d5d5d',
+                '700': '#4f4f4f',
+                '800': '#454545',
+                '900': '#3d3d3d',
+                '950': '#000000',
+            },
+              'claro': {
+                '50': '#ffffff',
+                '100': '#efefef',
+                '200': '#dcdcdc',
+                '300': '#bdbdbd',
+                '400': '#989898',
+                '500': '#7c7c7c',
+                '600': '#656565',
+                '700': '#525252',
+                '800': '#464646',
+                '900': '#3d3d3d',
+                '950': '#292929',
+            },
+              }
         tailwind.config = {
           theme: {
             extend: {
-              colors: {
-                'tema': {
-                    '50': 'oklch(98.44% 0.02 193.34)',
-                    '100': 'oklch(96.41% 0.05 194.85)',
-                    '200': 'oklch(94.03% 0.09 195.70)',
-                    '300': 'oklch(90.95% 0.13 196.87)',
-                    '400': 'oklch(86.53% 0.15 204.02)',
-                    '500': 'oklch(78.66% 0.13 207.00)',
-                    '600': 'oklch(66.93% 0.12 213.27)',
-                    '700': 'oklch(56.51% 0.10 215.77)',
-                    '800': 'oklch(48.17% 0.08 217.74)',
-                    '900': 'oklch(42.42% 0.07 219.77)',
-                    '950': 'oklch(32.36% 0.06 222.22)',
-                },
-                'temaDark': {
-                    '50': 'oklch(98.54% 0.02 187.35)',
-                    '100': 'oklch(96.09% 0.06 188.03)',
-                    '200': 'oklch(93.04% 0.10 186.56)',
-                    '300': 'oklch(88.94% 0.14 188.60)',
-                    '400': 'oklch(83.12% 0.14 190.79)',
-                    '500': 'oklch(75.00% 0.13 192.20)',
-                    '600': 'oklch(64.16% 0.11 193.99)',
-                    '700': 'oklch(54.09% 0.09 195.77)',
-                    '800': 'oklch(45.45% 0.07 197.35)',
-                    '900': 'oklch(39.71% 0.06 198.03)',
-                    '950': 'oklch(26.31% 0.04 202.00)',
-                },
-
-              }
+                colors: customColors, 
             }
           }
         }
       </script>
 </head>
-<body>
-    <header class="bg-red-200">
+<body class="bg-oscuro-900">
+    <header class="bg-oscuro-950 w-full h-14 flex items-center justify-center">
+      <div class="w-12 h-12 mx-4">
+        <img class="w-full h-full" src="https://i.pinimg.com/originals/fb/04/e0/fb04e08a284de9342c0458bd161c5505.png" alt="logo">
+      </div>
+
+      <h6 class="text-4xl font-mono text-white">BLOG</h6>
+
+      <div class="w-80 px-2 py-1 hover:border hover:boder-white text-white mx-8 rounded-lg ease-in duration-100">
+          <i class="fa-solid fa-house fa-lg"> </i>
+          <p class="text-lg items-center inline ml-4">Home</p>
+      </div> 
+
+      <button href="#" class="text-white px-2 bg-oscuro-900 rounded-s-3xl h-10"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <input class="bg-oscuro-900 rounded-e-3xl h-10 pr-8 w-80 pl-2" type="text" placeholder="Busca tu usuario" >
+
+      <div class="h-full flex items-center text-white m-6">
+          <i class="fa-solid fa-plus fa-lg m-2"></i>
+          <i class="fa-solid fa-bell fa-lg m-2"></i>
+      </div>
+
+      <div class="rounded-lg bg-oscuro-950 w-60 h-10 flex items-center hover:border hover:boder-white ">
+        <div class="ml-1 flex items-center">
+          <img src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" alt="foto" class="w-8">
+          <p class="text-white ml-2">Miguel Diaz</p>
+        </div>
+      </div>
 
     </header>
+
+    <main class="flex justify-center mt-6">
+      <div class="w-[80%] ">
+
+        <!--PUBLICACIONES-->
+        <div class="w-[60%] flex justify-center">
+          <div class="w-full h-16 flex justify-center">
+            <div class="ml-1 flex items-center p-4 bg-oscuro-950 rounded-lg text-white">
+              <img src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" alt="foto" class="w-[8%]">
+              <input type="text" placeholder="Escribe tu mensaje" class="ml-4 bg-oscuro-900 rounded-3xl p-2 w-[80%]">
+              <i class="fa-solid fa-camera-retro fa-lg w-[8%] ml-6"></i>
+            </div>
+          </div>
+        </div>
+
+        <!--ASIDE-->
+        <div class="w-[30%]">
+          
+        </div>
+      </div>
+    </main>
     
 </body>
 </html>
